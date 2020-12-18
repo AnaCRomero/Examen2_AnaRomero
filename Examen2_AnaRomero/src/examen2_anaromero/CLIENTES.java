@@ -1,5 +1,6 @@
 package examen2_anaromero;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -7,11 +8,17 @@ import java.util.ArrayList;
  * @author Ana Romweo - 11941043
  */
 
-public class CLIENTES {
+public class CLIENTES implements Serializable{
     private String nombre;
-    private ArrayList <COMPLEMENTOS> listaOrdenes = new ArrayList();
+    private ArrayList <ORDENES> listaOrdenes = new ArrayList();
+    
+    
+    private static final long SerialVersionUID=555L;
 
-    public CLIENTES(String nombre, ArrayList <COMPLEMENTOS> listaOrdenes) {
+    public CLIENTES() {
+    }
+    
+    public CLIENTES(String nombre, ArrayList <ORDENES> listaOrdenes) {
         this.nombre = nombre;
         this.listaOrdenes = listaOrdenes;
     }
@@ -24,11 +31,11 @@ public class CLIENTES {
         this.nombre = nombre;
     }
 
-    public ArrayList<COMPLEMENTOS> getListaOrdenes() {
+    public ArrayList<ORDENES> getListaOrdenes() {
         return listaOrdenes;
     }
 
-    public void setListaOrdenes(ArrayList<COMPLEMENTOS> listaOrdenes) {
+    public void setListaOrdenes(ArrayList<ORDENES> listaOrdenes) {
         this.listaOrdenes = listaOrdenes;
     }
 
