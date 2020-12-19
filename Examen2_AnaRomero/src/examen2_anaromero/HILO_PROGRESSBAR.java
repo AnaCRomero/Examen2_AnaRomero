@@ -1,51 +1,34 @@
 package examen2_anaromero;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Ana Romero
  */
-public class HILO_PROGRESSBAR {
-    private JProgressBar barra;
-    private JTable tabla;
-    private ORDENES ordenes; 
+public class HILO_PROGRESSBAR extends Thread {
+
+    private JProgressBar BARRA;
+    private JTable TABLA;
+    private ORDENES ORDEN;
 
     public HILO_PROGRESSBAR() {
     }
 
-    
-    
     public HILO_PROGRESSBAR(JProgressBar barra, JTable tabla, ORDENES ordenes) {
-        this.barra = barra;
-        this.tabla = tabla;
-        this.ordenes = ordenes;
+        this.BARRA = barra;
+        this.TABLA = tabla;
+        this.ORDEN = ordenes;
     }
 
-    public JProgressBar getBarra() {
-        return barra;
+    @Override
+    public void run() {
+        int contador = 0;
+        //srry por no poder hacer hilos, no tengo excusa la verdad :,3 no me prepare bien para examen ahi disculpa
     }
-
-    public void setBarra(JProgressBar barra) {
-        this.barra = barra;
-    }
-
-    public JTable getTabla() {
-        return tabla;
-    }
-
-    public void setTabla(JTable tabla) {
-        this.tabla = tabla;
-    }
-
-    public ORDENES getOrdenes() {
-        return ordenes;
-    }
-
-    public void setOrdenes(ORDENES ordenes) {
-        this.ordenes = ordenes;
-    }
-    
-    
 }

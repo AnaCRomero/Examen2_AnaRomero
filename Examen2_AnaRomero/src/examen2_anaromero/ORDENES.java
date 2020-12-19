@@ -21,6 +21,7 @@ public class ORDENES implements Serializable{
         this.numOrden = numOrden;
     }
 
+    
     public int getNumOrden() {
         return numOrden;
     }
