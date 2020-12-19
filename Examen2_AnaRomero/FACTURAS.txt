@@ -1,4 +1,0 @@
-Fecha de la compra: 2020/12/18
-Cliente: Luis
-Numero de orden: 54
-Pedido: [Biscuit, Fresco, Pieza de pollo, Pieza de pollo, Pieza de pollo, Pieza de pollo]

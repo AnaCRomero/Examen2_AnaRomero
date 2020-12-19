@@ -384,9 +384,10 @@ public class MAIN extends javax.swing.JFrame {
         File archivo = null;
         FileWriter FW = null;
         BufferedWriter BW = null;
-
+        String nombre = NOMBRE.getText();
         try {
-            archivo = new File("./FACTURAS.txt");
+            archivo = new File("./" + nombre + ".txt");
+
             FW = new FileWriter(archivo);
             BW = new BufferedWriter(FW);
             //FACTURA
@@ -403,7 +404,6 @@ public class MAIN extends javax.swing.JFrame {
             Date fecha = new Date();
             SimpleDateFormat sd = new SimpleDateFormat("yyyy/MM/dd");
             String dia = sd.format(fecha);
-            String nombre = NOMBRE.getText();
             String Orden = numOrdeen.getText();
 
             String linea = "Fecha de la compra: " + dia+ "\n"
